@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/styles/style.scss" />
+    <title>Slots online</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="header">
+        <h1 class="header__title">Slots online</h1>
+      </header>
+      <main class="main">
+        <section class="sidebar">
+          <div class="sidebar__wallet">
+            <p class="sidebar__wallet-money">Wallet: <span id="wallet-money">0</span></p>
+            <div class="sidebar__wallet-messages" id="messages-panel"></div>
+            <div class="sidebar__wallet-forms">
+              <p class="sidebar__wallet-formsTitle">Set your wallet:</p>
+              <div class="sidebar__wallet-formsQuickMoney">
+                <button class="sidebar__wallet-formsQuickMoney-btn quick-money" data-value="5">$5</button>
+                <button class="sidebar__wallet-formsQuickMoney-btn quick-money" data-value="10">$10</button>
+                <button class="sidebar__wallet-formsQuickMoney-btn quick-money" data-value="25">$25</button>
+                <button class="sidebar__wallet-formsQuickMoney-btn quick-money" data-value="50">$50</button>
+                <button class="sidebar__wallet-formsQuickMoney-btn quick-money" data-value="100">$100</button>
+                <button class="sidebar__wallet-formsQuickMoney-btn quick-money" data-value="500">$500</button>
+              </div>
+              <div class="sidebar__wallet-formsItem">
+                <input type="number" name="" id="wallet-input" placeholder="Input value" />
+                <button id="wallet-setBtn">Set</button>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar__restart">
+            <button class="sidebar__restart-btn" id="restart-button">Game restart</button>
+          </div>
+        </section>
+        <section class="game">
+          <div class="game__slots">
+            <div class="game__slots-column" id="slot-1">
+              <div class="game__slots-item">🙂</div>
+              <div class="game__slots-item">🙂</div>
+              <div class="game__slots-item">🙂</div>
+            </div>
+            <div class="game__slots-column" id="slot-2">
+              <div class="game__slots-item">🙂</div>
+              <div class="game__slots-item">🙂</div>
+              <div class="game__slots-item">🙂</div>
+            </div>
+            <div class="game__slots-column" id="slot-3">
+              <div class="game__slots-item">🙂</div>
+              <div class="game__slots-item">🙂</div>
+              <div class="game__slots-item">🙂</div>
+            </div>
+          </div>
+          <div class="game__bid">
+            <label for="bid" class="game__bid-label"> Total bid: </label>
+            <div class="game__bid-inputContainer">
+              <button class="game__bid-inputContainer-btn" id="decrement-bid">-1</button>
+              <input type="number" class="game__bid-inputContainer-input" id="bid" autocomplete="off" />
+              <button class="game__bid-inputContainer-btn" id="increment-bid">+1</button>
+            </div>
+          </div>
+          <button class="game__startBtn" id="bet-button">Bet</button>
+          <div class="game__stats">
+            <p class="game__stats-item">Games: <span id="stats-games"></span></p>
+            <p class="game__stats-item">Profit: <span id="stats-profit"></span></p>
+            <p class="game__stats-item">Win rate: <span id="stats-winRate"></span></p>
+            <p class="game__stats-item">Winnings sum: <span id="stats-winningsSum"></span></p>
+            <p class="game__stats-item">Lost sum: <span id="stats-lostSum"></span></p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="../src/scripts/index.ts"></script>
+  </body>
+</html>

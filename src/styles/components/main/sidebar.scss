@@ -1,0 +1,155 @@
+.sidebar {
+  flex-basis: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  border-right: 3px solid $gold;
+  background-color: $primary;
+
+  &__wallet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-money {
+      font-size: $font-L;
+      color: $fontColorLight;
+
+      #wallet-money {
+        font-weight: bold;
+      }
+    }
+
+    &-messages {
+      height: 500px;
+      width: 100%;
+      margin: 30px 0;
+      padding: 20px;
+      background-color: $secondary;
+      overflow: hidden;
+
+      & > p {
+        font-size: $font-S;
+        font-weight: bold;
+        line-height: 20px;
+
+        &.negative {
+          color: $red;
+        }
+
+        &.neutral {
+          color: $fontColorLight;
+        }
+
+        &.positive {
+          color: $green;
+        }
+      }
+    }
+
+    &-forms {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      &Title {
+        width: 100%;
+        margin-bottom: 20px;
+        color: $fontColorLight;
+        font-size: $font-M;
+        text-align: center;
+      }
+
+      &QuickMoney {
+        width: 100%;
+        display: flex;
+
+        &-btn {
+          width: 100%;
+          padding: 8px 0;
+          border: none;
+          border-top: 2px solid $secondary;
+          font-weight: bold;
+          color: $fontColorLight;
+          font-size: $font-M;
+          background-color: $secondary;
+          cursor: pointer;
+          transition: 0.1s;
+
+          &:hover {
+            border-top: 2px solid $fontColorLight;
+            background-color: $primary;
+          }
+        }
+      }
+
+      &Item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0;
+
+        input {
+          position: relative;
+          width: 110px;
+          padding: 5px 10px;
+          border: none;
+          border-top: 2px solid $fontColorLight;
+          font-size: $font-M;
+          font-weight: bold;
+          text-align: center;
+          background-color: $secondary;
+          color: $fontColorLight;
+
+          &:focus {
+            background-color: $primary;
+          }
+        }
+
+        button {
+          width: 45px;
+          height: 45px;
+          align-self: center;
+          margin: 10px 0 0;
+          padding: 5px 0;
+          border: 2px solid $gold;
+          border-radius: 50%;
+          background-color: $secondary;
+          color: $gold;
+          font-size: $font-M;
+          font-weight: bold;
+          cursor: pointer;
+          transition: 0.1s;
+
+          &:hover {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  &__restart {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+
+    &-btn {
+      padding: 7px 20px;
+      border: none;
+      border-top: 2px solid $fontColorLight;
+      background-color: $secondary;
+      color: $fontColorLight;
+      font-size: $font-M;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.1s;
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}

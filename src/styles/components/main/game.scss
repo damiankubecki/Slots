@@ -1,0 +1,155 @@
+.game {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary;
+
+  &__slots {
+    position: relative;
+    display: flex;
+    width: 800px;
+    height: 450px;
+    border: 2px solid $gold;
+    border-radius: 10px;
+    background-color: $secondary;
+
+    &::after {
+      box-sizing: border-box;
+      position: absolute;
+      top: 150px;
+      left: -2px;
+      height: 150px;
+      width: 800px;
+      content: '';
+      border-top: 2px solid $gold;
+      border-bottom: 2px solid $gold;
+    }
+
+    &-column {
+      height: 100%;
+      width: calc(800px / 3);
+    }
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      width: 100%;
+      font-size: $font-XXXL;
+    }
+  }
+
+  &__bid {
+    margin: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-label {
+      padding: 5px 0;
+      color: $fontColorLight;
+      font-size: $font-M;
+      font-weight: bold;
+    }
+
+    &-inputContainer {
+      position: relative;
+
+      &-input {
+        width: 150px;
+        padding: 5px 10px;
+        border: none;
+        border-top: 2px solid $fontColorLight;
+        font-size: $font-M;
+        font-weight: bold;
+        text-align: center;
+        background-color: $secondary;
+        color: $fontColorLight;
+
+        &:focus {
+          background-color: $primary;
+        }
+      }
+
+      &-btn {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        bottom: 0;
+        border: none;
+        width: 30px;
+        background-color: $primary;
+        font-weight: bold;
+        font-size: $font-M;
+        cursor: pointer;
+        transition: 0.1s;
+
+        &#decrement-bid {
+          color: $red;
+          &:hover {
+            background-color: $red;
+            color: $fontColorDark;
+          }
+        }
+
+        &#increment-bid {
+          left: auto;
+          right: 0;
+          color: $green;
+          &:hover {
+            background-color: $green;
+            color: $fontColorDark;
+          }
+        }
+      }
+    }
+  }
+
+  &__startBtn {
+    height: 55px;
+    width: 55px;
+    margin: 20px 0 0;
+    border: 2px solid $fontColorLight;
+    border-radius: 50%;
+    color: white;
+    font-size: $font-M;
+    background-color: $red;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s;
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
+
+  &__stats {
+    width: 100%;
+    max-width: 1200px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-item {
+      width: 20%;
+      text-align: center;
+      color: $fontColorLight;
+      font-size: $font-M;
+
+      & > span {
+        font-weight: bold;
+      }
+
+      #stats-winningsSum {
+        color: $green;
+      }
+
+      #stats-lostSum {
+        color: $red;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.header {
+  height: 70px;
+  background-color: $primary;
+
+  &__title {
+    width: 400px;
+    border-right: 3px solid $gold;
+    text-align: center;
+    line-height: 70px;
+    color: $gold;
+    background-color: $primary;
+    font-size: $font-XXL;
+    font-style: italic;
+  }
+}

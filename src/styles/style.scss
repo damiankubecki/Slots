@@ -25,6 +25,7 @@ input[type='number'] {
   min-height: 100vh;
 }
 
+@import 'media.scss';
 @import 'variables.scss';
 @import 'components/header/header.scss';
 @import 'components/main/main.scss';

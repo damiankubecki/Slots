@@ -20,7 +20,7 @@
       top: 150px;
       left: -2px;
       height: 150px;
-      width: 800px;
+      width: 100%;
       content: '';
       border-top: 2px solid $gold;
       border-bottom: 2px solid $gold;
@@ -132,6 +132,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px 0;
 
     &-item {
       width: 20%;
@@ -149,6 +150,74 @@
 
       #stats-lostSum {
         color: $red;
+      }
+    }
+  }
+
+  @media (max-width: $laptop) {
+    &__slots {
+      width: 650px;
+    }
+
+    &__stats {
+      flex-direction: column;
+      justify-content: flex-start;
+
+      &-item {
+        padding: 10px 0;
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: $tablet-M) {
+    padding-top: 45px;
+
+    &__slots {
+      width: 650px;
+    }
+  }
+
+  @media (max-width: $phone-L) {
+    &__slots {
+      width: 95vw;
+      height: 225px;
+      border-radius: 5px;
+
+      &::after {
+        top: 75px;
+        height: 75px;
+      }
+
+      &-item {
+        height: 75px;
+        font-size: $font-XL;
+      }
+    }
+
+    &__bid {
+      &-inputContainer {
+        &-input {
+          padding: 7px 10px;
+        }
+
+        &-btn {
+          width: 34px;
+        }
+      }
+    }
+
+    &__startBtn {
+      &:hover {
+        background-color: $red;
+      }
+    }
+
+    &__stats {
+      padding: 25px 0 40px;
+
+      &-item {
+        padding: 3px 0;
       }
     }
   }

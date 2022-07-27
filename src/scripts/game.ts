@@ -2,6 +2,7 @@ import Wallet from './wallet';
 import Bid from './bid';
 import Draw from './draw';
 import Messages from './messages';
+import Sidebar from './sidebar';
 import Stats from './stats';
 
 interface game {
@@ -22,6 +23,7 @@ class Game extends Draw implements game {
 
   constructor() {
     super();
+    new Sidebar();
     this.WALLET = new Wallet();
     this.BID = new Bid();
     this.STATS = new Stats();

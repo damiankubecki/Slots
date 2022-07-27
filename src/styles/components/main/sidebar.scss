@@ -152,4 +152,96 @@
       }
     }
   }
+
+  @media (max-width: $tablet_L) {
+    flex-basis: 330px;
+  }
+
+  @media (max-width: $tablet_M) {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    padding: 0 0 75px;
+    border: none;
+    transform: translateX(-105vw);
+    z-index: 1;
+    transition: 0.2s;
+
+    &.active {
+      transform: translateX(0);
+
+      .sidebar__wallet-money {
+        transform: translateX(0vw);
+      }
+    }
+
+    &__wallet {
+      &-money {
+        padding: 10px 0 40px;
+        transform: translateX(105vw);
+      }
+
+      &-messages {
+        display: none;
+      }
+
+      &-forms {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        &Title {
+          width: 100%;
+          margin-bottom: 20px;
+          color: $fontColorLight;
+          font-size: $font-M;
+          text-align: center;
+        }
+
+        &QuickMoney {
+          width: 100%;
+          display: flex;
+
+          &-btn {
+            width: 100%;
+            padding: 8px 0;
+            border: none;
+            border-top: 2px solid $secondary;
+            font-weight: bold;
+            color: $fontColorLight;
+            font-size: $font-M;
+            background-color: $secondary;
+            cursor: pointer;
+            transition: 0.1s;
+
+            &:hover {
+              border-top: 2px solid $fontColorLight;
+              background-color: $primary;
+            }
+          }
+        }
+
+        &Item {
+          margin: 30px 0;
+
+          input {
+            width: 120px;
+            padding: 7px 10px;
+          }
+
+          button {
+            width: 50px;
+            height: 50px;
+            margin: 20px 0 0;
+
+            &:hover {
+              background-color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -3,11 +3,7 @@
 ### Prosta gra slots lub po polsku - jednoręki bandyta.
 Gdyby szczęście nie dopisało istnieje możliwość doładowania ilości pieniędzy w portfelu. Dodatkowo podczas rozgrywki na bieżąco wyświetlane są statystki ze wszystkich gier.
 
-<h4>Stworzone przy użyciu: </h4>
-
-:wrench: **parcel**
-<br>
-:bulb: **HTML | SCSS | TypeScript**
+:bulb: **parcel | HTML | SCSS | TypeScript**
 
 [Slots]: <https://slots-online.netlify.app/>
 

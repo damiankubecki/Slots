@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "(npx parcel ./public/index.html) & npx parcel watch ./public/index.html",
-    "build": "parcel build"
+    "build": "parcel build ./public/index.html"
   },
   "author": "Damian Kubecki",
   "license": "ISC",

@@ -1,10 +1,6 @@
 import { SLOTS_OPTIONS } from '../config';
 
-interface draw {
-  drawResult(bid: number): number;
-}
-
-class Draw implements draw {
+class Draw {
   private SLOTS_OPTIONS: string[] = SLOTS_OPTIONS;
 
   private getRandomOptionIndex = (): number => Math.floor(Math.random() * this.SLOTS_OPTIONS.length);
